@@ -1,0 +1,10 @@
+<h3> <%= @task.title %> </h3>
+<p> <%= @task.details %> </p>
+<p>
+<%if @task.completed == true %>
+  &#9745; This task is completed
+<%elsif @task.completed == false %>
+  &#9744; This task is not completed
+<%end%>
+</p>
+<%= link_to "Show all tasks", tasks_path %>
